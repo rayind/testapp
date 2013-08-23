@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  active_time: 1
+  gid: MyString
+  last_active: 2013-08-23 15:25:54
+
+two:
+  active_time: 1
+  gid: MyString
+  last_active: 2013-08-23 15:25:54

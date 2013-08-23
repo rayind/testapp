@@ -1,0 +1,16 @@
+<% if @user.password.blank?%>
+	<%= link_to "注册", 'new' %>
+	<%= link_to "登录", 'login' %>
+<% else %>
+	<%= link_to "退出", 'quit' %>
+<% end %>
+<br/>
+<% if @user.password.blank?%>
+你好，陌生人！你没有登录，或者你还没有注册，但是你已经浏览这个页面<%= @user.active_time / 60%> 分钟了。 
+<% else %>
+<%= @user.username %>谢谢你登录了我们网站！你已经登录了 <%= @user.logins%> 次了，总共登录时间是 <%= @user.active_time / 60%> 分钟了。 
+<% end %>
+<br/>
+现在总共有 <%= @users.count %> 个注册用户在查看这个网站，有 <%= @guests.count %>个陌生人在查看这个网站
+<br/>
+<%= flash[:notice] %>
